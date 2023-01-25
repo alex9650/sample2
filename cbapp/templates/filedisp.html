@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th>image</th>
+        <th>name</th>
+        <th>delete file</th>
+        <th>view item</th>
+        <th>update</th>
+    </tr>
+    {% for i,j,k in a %}
+    <tr>
+        <td><img src='{% static i %}' height="100px" width="100px"></td>
+        <td>{{j}}</td>
+        <td><a href="http://127.0.0.1:8000/cbapp/filedelete/{{k}}">delete</a></td>
+        <td><a href="http://127.0.0.1:8000/cbapp/filedetail/{{k}}">details</a></td>
+        <td><a href="http://127.0.0.1:8000/cbapp/fileup/{{k}}">edit</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+
+
+

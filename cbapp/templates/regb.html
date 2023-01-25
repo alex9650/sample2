@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="name"><br><br>
+    <label>Address:</label>
+    <textarea name="address"></textarea><br><br>
+
+    <label>gender:</label>
+    <input type="radio" name="gender">female
+    <input type="radio" name="gender">male<br><br>
+
+    <label>state:</label>
+    <select name="state">
+        <option>--select state--</option>
+        <option value="kerala">kerala</option>
+        <option value="karnataka">karnataka</option>
+        <option value="tamilnadu">tamilnadu</option>
+    </select><br><br>
+    <input type="submit">
+</form>
+</body>
+</html>

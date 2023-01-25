@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <tr>
+    <th>Product Name</th>
+    <th>Price</th>
+    <th>Customer Name</th>
+    <th>Customer ID</th>
+    <th>Phone</th>
+
+    <th>Delete Item</th>
+    <th>View Detail</th>
+    <th>Update Data</th>
+  </tr>
+  {% for i in a %}
+  <tr>
+    <td>{{i.productname}}</td>
+    <td>{{i.price}}</td>
+    <td>{{i.customername}}</td>
+    <td>{{i.customerid}}</td>
+    <td>{{i.phone}}</td>
+
+    <td><a href="http://127.0.0.1:8000/cbapp/pdel/{{i.id}}">delete</a></td>
+    <td><a href="http://127.0.0.1:8000/cbapp/pdetail/{{i.id}}">detail</a></td>
+    <td><a href="http://127.0.0.1:8000/cbapp/pup/{{i.id}}">edit</a></td>
+
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

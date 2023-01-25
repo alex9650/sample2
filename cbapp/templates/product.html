@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <label>product name</label>
+    <input type="text" name="productname"><br><br>
+    <label>price</label>
+    <input type="number" name="price"><br><br>
+
+    <label>customer name</label>
+    <input type="text" name="customername"><br><br>
+
+    <label>customer id</label>
+    <input type="number" name="customerid"><br><br>
+
+    <label>phone</label>
+    <input type="number" name="phone"><br><br>
+
+    <input type="submit">
+
+</form>
+</body>
+</html>
